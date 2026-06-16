@@ -1,4 +1,4 @@
-const productos = [
+window.productos = [
   {
     nombre: 'Lasaña casera',
     categoria: 'Pasta',

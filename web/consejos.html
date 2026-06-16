@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consejos | Delicias Express</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-pagina="consejos">
+  <header class="site-header">
+    <nav class="menu-principal" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Ir a la página de inicio">
+        <span class="marca-icono">🍲</span>
+        <span>Delicias Express</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="menu-enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="consejos.html" aria-current="page">Consejos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cabecera-pagina consejos-hero">
+      <p class="eyebrow">Guía rápida</p>
+      <h1>Consejos para disfrutar mejor tus platos</h1>
+      <p>
+        Pequeñas recomendaciones para conservar, calentar y combinar comida preparada sin perder calidad.
+      </p>
+    </section>
+
+    <section class="grid-consejos" aria-label="Consejos de conservación y consumo">
+      <article class="consejo-card">
+        <span>❄️</span>
+        <h2>Conservación</h2>
+        <p>Guarda los platos en frío y respeta siempre la fecha recomendada de consumo.</p>
+      </article>
+      <article class="consejo-card">
+        <span>🔥</span>
+        <h2>Calentado</h2>
+        <p>Calienta poco a poco y remueve a mitad del proceso para repartir bien el calor.</p>
+      </article>
+      <article class="consejo-card">
+        <span>🥦</span>
+        <h2>Equilibrio</h2>
+        <p>Combina platos principales con ensaladas, cremas o fruta para completar el menú.</p>
+      </article>
+      <article class="consejo-card">
+        <span>♻️</span>
+        <h2>Aprovechamiento</h2>
+        <p>Planifica tus comidas semanales para reducir desperdicio y ahorrar tiempo.</p>
+      </article>
+    </section>
+
+    <section class="bloque faq" aria-labelledby="titulo-faq">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="titulo-faq">Dudas habituales</h2>
+      <details>
+        <summary>¿Puedo congelar los platos?</summary>
+        <p>Algunos platos sí, aunque recomendamos revisar la indicación de cada receta.</p>
+      </details>
+      <details>
+        <summary>¿Hay opciones vegetarianas?</summary>
+        <p>Sí. Puedes buscar “vegetal” o “saludable” en la página de productos.</p>
+      </details>
+      <details>
+        <summary>¿La web necesita conexión a internet?</summary>
+        <p>No. La web del laboratorio funciona en local y está pensada para pruebas local-first.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Delicias Express · Consejos para practicar navegación, contenido y accesibilidad básica.</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

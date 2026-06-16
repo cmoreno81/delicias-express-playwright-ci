@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delicias Express | Comida preparada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-pagina="inicio">
+  <header class="site-header">
+    <nav class="menu-principal" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Ir a la página de inicio">
+        <span class="marca-icono">🍲</span>
+        <span>Delicias Express</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <ul class="menu-enlaces">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="consejos.html">Consejos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-contenido">
+        <p class="eyebrow">Comida preparada · Casera · Lista en minutos</p>
+        <h1>Comer bien no debería ser complicado.</h1>
+        <p class="hero-texto">
+          En Delicias Express preparamos platos equilibrados, sabrosos y listos para calentar.
+          Ideal para personas con poco tiempo que no quieren renunciar a comer como en casa.
+        </p>
+        <div class="acciones-hero">
+          <a class="boton boton-principal" href="productos.html">Ver productos</a>
+          <a class="boton boton-secundario" href="consejos.html">Leer consejos</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Plato recomendado">
+        <span class="pill">Recomendado hoy</span>
+        <h2>Bowl vegetal saludable</h2>
+        <p>Quinoa, garbanzos, aguacate, verduras y salsa ligera.</p>
+        <strong>7,25 €</strong>
+      </div>
+    </section>
+
+    <section class="bloque bloque-destacado" aria-labelledby="titulo-empresa">
+      <div>
+        <p class="eyebrow">Nuestra propuesta</p>
+        <h2 id="titulo-empresa">Cocinamos para que tú ganes tiempo.</h2>
+        <p>
+          Somos una empresa local especializada en comida preparada. Diseñamos platos sencillos,
+          reconocibles y fáciles de conservar. La web de este laboratorio está pensada para practicar
+          pruebas E2E sobre una aplicación pequeña, bonita y controlada.
+        </p>
+      </div>
+      <div class="grid-beneficios">
+        <article class="beneficio">
+          <span>🥗</span>
+          <h3>Platos equilibrados</h3>
+          <p>Opciones vegetales, tradicionales, de pasta, carnes y pescados.</p>
+        </article>
+        <article class="beneficio">
+          <span>⏱️</span>
+          <h3>Listos en minutos</h3>
+          <p>Solo tienes que calentar, servir y disfrutar.</p>
+        </article>
+        <article class="beneficio">
+          <span>🏠</span>
+          <h3>Sabor casero</h3>
+          <p>Recetas familiares con ingredientes sencillos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Delicias Express · Laboratorio local-first para pruebas E2E con Playwright.</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

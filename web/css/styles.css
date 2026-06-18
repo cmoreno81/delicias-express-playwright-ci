@@ -1,6 +1,6 @@
 :root {
   --color-fondo: #fff8ee;
-  --color-superficie: #ffffff;
+  --color-superficie: #fff;
   --color-texto: #26312b;
   --color-muted: #66756c;
   --color-principal: #2f7d4e;
@@ -332,11 +332,6 @@ p {
   padding: 56px 28px;
 }
 
-.cabecera-pagina p:not(.eyebrow) {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
 .panel-busqueda {
   margin: 24px 0;
   padding: 24px;
@@ -544,7 +539,12 @@ p {
   font-size: 0.92rem;
 }
 
-@media (max-width: 900px) {
+.cabecera-pagina p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (width <= 900px) {
   .hero,
   .bloque-destacado,
   .panel-busqueda {
@@ -570,7 +570,7 @@ p {
   }
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   main {
     width: min(100% - 24px, 1120px);
   }

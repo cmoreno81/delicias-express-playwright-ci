@@ -4,6 +4,33 @@ const botonLimpiar = document.querySelector('#limpiar-busqueda');
 const contadorProductos = document.querySelector('#contador-productos');
 const panelSinResultados = document.querySelector('#sin-resultados');
 
+const API_BASE_URL = 'http://127.0.0.1:3001';
+const usarApi = new URLSearchParams(window.location.search).get('fuente') === 'api';
+let catalogoProductos = window.catalogoProductos ?? [];
+
+async function cargarProductosDesdeApi() {
+  const response = await fetch(`${API_BASE_URL}/api/productos`);
+  if (!response.ok) {
+    throw new Error(`Error API: ${response.status()}`);
+  }
+  const body = await response.json();
+  catalogoProductos = body.data;
+}
+
+async function iniciarCatalogo() {
+  try {
+    if (usarApi) {
+      await cargarProductosDesdeApi();
+    }
+    renderizarProductos();
+  } catch (_error) {
+    listaProductos.innerHTML = '';
+    contadorProductos.textContent = 'No se pudo cargar el catalogo';
+    panelSinResultados.hidden = false;
+    panelSinResultados.querySelector('h2').textContent = 'No se pudo cargar el catalogo';
+  }
+}
+
 function normalizar(texto) {
   return texto
     .toLowerCase()
@@ -51,7 +78,7 @@ function crearCardProducto(producto) {
 }
 
 function renderizarProductos(textoBusqueda = '') {
-  const productosFiltrados = productos.filter((producto) => coincideConBusqueda(producto, textoBusqueda));
+  const productosFiltrados = catalogoProductos.filter((producto) => coincideConBusqueda(producto, textoBusqueda));
 
   listaProductos.innerHTML = '';
 
@@ -64,7 +91,7 @@ function renderizarProductos(textoBusqueda = '') {
 }
 
 if (listaProductos && inputBusqueda && botonLimpiar) {
-  renderizarProductos();
+  iniciarCatalogo();
 
   inputBusqueda.addEventListener('input', (event) => {
     renderizarProductos(event.target.value);

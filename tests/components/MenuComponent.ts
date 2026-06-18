@@ -8,7 +8,7 @@ export class MenuComponent {
   }
 
   inicio() {
-    return this.page.getByRole('link', { name: 'Ir a la página de inicio' });
+    return this.page.getByRole('link', { name: /delicias express/i });
   }
 
   productos() {

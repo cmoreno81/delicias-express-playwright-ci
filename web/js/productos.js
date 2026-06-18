@@ -1,4 +1,4 @@
-const productos = [
+const catalogoInicialProductos = [
   {
     nombre: 'Lasaña casera',
     categoria: 'Pasta',
@@ -80,3 +80,5 @@ const productos = [
     icono: '🐟'
   }
 ];
+
+window.catalogoProductos = catalogoInicialProductos;

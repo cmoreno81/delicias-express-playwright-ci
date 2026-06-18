@@ -77,4 +77,9 @@ export class ProductosPage implements PaginaProductos {
       await expect(this.productoPorNombre(nombre)).toBeVisible();
     }
   }
+
+  async abrirDesdeApi() {
+    await this.page.goto('/productos.html?fuente=api');
+  }
+
 }

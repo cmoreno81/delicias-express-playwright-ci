@@ -18,7 +18,13 @@
     "validate:html": "html-validate web/**/*.html",
     "lint:css": "stylelint web/**/*.css",
     "quality": "npm run lint && npm run validate:html && npm run lint:css",
-    "ci": "npm run quality && npm run test:ci"
+    "ci": "npm run quality && npm run test:ci",
+    "api": "node ./api/delicias-api.mjs",
+    "test:api": "playwright test tests/api --project=chromium",
+    "test:hibrido": "playwright test tests/hibrido --project=chromium",
+    "test:mock": "playwright test tests/mock --project=chromium",
+    "test:api-ui": "playwright test tests/api tests/hibrido tests/mock --project=chromium",
+    "ci:api-ui": "npm run test:api-ui"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
